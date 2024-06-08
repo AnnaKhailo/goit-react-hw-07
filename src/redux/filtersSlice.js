@@ -6,18 +6,8 @@ const filtersSlice = createSlice({
     name: "",
   },
   reducers: {
-    changeFilter: {
-      reducer(state, action) {
-        state.name = action.payload;
-      },
-      prepare(value) {
-        return {
-          payload: value,
-          meta: {
-            ga: true,
-          },
-        };
-      },
+    changeFilter: (state, action) => {
+      state.name = action.payload;
     },
   },
 });
